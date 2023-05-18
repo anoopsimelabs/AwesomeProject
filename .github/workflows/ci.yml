@@ -23,10 +23,3 @@ jobs:
       - name: Run test
         run: |
           npm run test:cov
-          env:
-            JEST_JUNIT_OUTPUT_DIR: ./reports/junit/
-      - name: Upload Jest JUnit test results
-        uses: actions/upload-artifact@v3
-        with:
-            name: jest-test-results
-            path: ./reports/junit/junit.xml
